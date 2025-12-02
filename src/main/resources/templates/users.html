@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<p>Lista utenti</p>
+		
+		<form action="/utenti" method="POST">
+			<input type="text" name="nome" placeholder="Nome utente" />
+			<input type="text" name="cognome" placeholder="Nome utente" />
+			<input type="submit" value="Salva utente" />
+		</form>
+		
+		<p style="margin-top:20px;">Lista utenti</p>
+		
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Nome</th>
+					<th>Cognome</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="utente : ${utenti}">
+        			<th th:text="${utente.getId}"></li>
+        			<th th:text="${utente.getFirstName}"></li>
+        			<th th:text="${utente.getLastName}"></li>
+        		</tr>
+			</tbody>
+		</table>
+
+	</body>
+</html>

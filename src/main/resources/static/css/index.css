@@ -1,0 +1,19 @@
+*, *::before, *::after {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 10px;
+}
+
+h1, p {
+	margin-bottom: 10px;
+}
+
+table th, table td {
+	width: 120px;
+	text-align: left;
+	border: 1px solid #0c0c0c;
+	padding: 10px;
+}
