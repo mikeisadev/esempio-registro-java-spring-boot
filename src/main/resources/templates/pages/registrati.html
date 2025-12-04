@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: baseLayout(${pageTitle}, ~{::div})}">
+	<div>
+		<h1>Registrazione</h1>
+	
+		<form th:action="@{/registrati}" th:object="${regForm}" method="post">
+		
+		    <!-- CSRF token (obbligatorio con Spring Security) -->
+		    <input type="hidden"
+		           th:name="${_csrf.parameterName}"
+		           th:value="${_csrf.token}" />
+		
+		    <div>
+		        <label for="email">Email:</label>
+		        <input th:field="*{email}" id="email" type="email"/>
+		        <div th:if="${#fields.hasErrors('email')}" style="color:red"
+		             th:errors="*{email}"></div>
+		    </div>
+		
+		    <div>
+		        <label for="firstName">Nome:</label>
+		        <input th:field="*{firstName}" id="firstName" type="text"/>
+		        <div th:if="${#fields.hasErrors('firstName')}" style="color:red"
+		             th:errors="*{firstName}"></div>
+		    </div>
+		
+		    <div>
+		        <label for="lastName">Cognome:</label>
+		        <input th:field="*{lastName}" id="lastName" type="text"/>
+		        <div th:if="${#fields.hasErrors('lastName')}" style="color:red"
+		             th:errors="*{lastName}"></div>
+		    </div>
+		
+		    <div>
+		        <label for="password">Password:</label>
+		        <input th:field="*{password}" id="password" type="password"/>
+		        <div th:if="${#fields.hasErrors('password')}" style="color:red"
+		             th:errors="*{password}"></div>
+		    </div>
+		
+		    <div>
+		        <label for="confirmPassword">Conferma password:</label>
+		        <input th:field="*{confirmPassword}" id="confirmPassword" type="password"/>
+		        <div th:if="${#fields.hasErrors('confirmPassword')}" style="color:red"
+		             th:errors="*{confirmPassword}"></div>
+		    </div>
+		
+		    <button type="submit">Registrati</button>
+		</form>
+		
+		<p>Hai già un account? <a th:href="@{/login}">Vai al login</a></p>
+	</div>
+</html>

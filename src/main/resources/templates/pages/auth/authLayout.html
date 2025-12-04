@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<body>
+		<div th:fragment="authLayout(authContent)">
+			<!-- Sidebar -->
+			<div id="sidebar">
+				<ul>
+					<li>Dashboard</li>
+					<li>Utenti</li>
+					<li>Pagine</li>
+					<li>Articoli</li>
+				</ul>
+			</div>
+			
+			<!-- Main content -->
+			<div class="main-content" th:insert="${authContent}"></div>
+		</div>
+	</body>
+
+</html>

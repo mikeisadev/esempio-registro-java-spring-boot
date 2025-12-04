@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html>
-	<head>
-			<link rel="stylesheet" href="css/index.css">
-	</head>
-	<body>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: baseLayout(${pageTitle}, ~{::div})}">
+	<div>
 		<p>Lista utenti</p>
 		
 		<form action="/utenti" method="POST">
@@ -24,12 +22,12 @@
 			</thead>
 			<tbody>
 				<tr th:each="utente : ${utenti}">
-        			<th th:text="${utente.getId}"></li>
-        			<th th:text="${utente.getFirstName}"></li>
-        			<th th:text="${utente.getLastName}"></li>
-        		</tr>
+	       			<th th:text="${utente.getId}"></li>
+	       			<th th:text="${utente.getFirstName}"></li>
+	       			<th th:text="${utente.getLastName}"></li>
+	       		</tr>
 			</tbody>
 		</table>
-
-	</body>
+	
+	</div>
 </html>

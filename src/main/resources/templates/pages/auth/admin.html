@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="
+      	~{layout :: baseLayout('Dashboard',
+      		~{pages/auth/authLayout :: authLayout(~{::div})}
+      	)}
+      ">
+      
+      <div>
+      		<h1>Ciao</h1>
+
+			<p>Ciao ragazzi</p>
+			
+			<p>Siamo dentro l'area di amministrazione di un gestionale Spring Boot</p>
+			
+			<a th:href="@{/logout}">Logout</a>
+      </div>
+      
+</html>
