@@ -1,10 +1,11 @@
-package com.app.registro.security;
+package com.app.registro.services;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 import com.app.registro.repository.UserRepository;
+import com.app.registro.security.CustomUserDetails;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

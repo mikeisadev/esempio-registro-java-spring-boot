@@ -41,7 +41,7 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	// GETTERS AND SETTERS
+	// SETTERS and GETTERS
 	public String getEmail() {
 		return email;
 	}
@@ -93,5 +93,7 @@ public class User {
 	public Long getId() {
 		return id;
 	}
+
+	
 
 }

@@ -10,8 +10,8 @@ import jakarta.persistence.*;
 import com.app.registro.model.*;
 
 @Entity
-@Table(name="posts")
-public class Post {
+@Table(name="pages")
+public class Page {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,9 +35,9 @@ public class Post {
 	@Column(name="updated_at", nullable=false)
 	private LocalDateTime updatedAt;
 	
-	public Post() {}
+	public Page() {}
 
-	public Post(String title, String content) {
+	public Page(String title, String content) {
 		super();
 		this.title = title;
 		this.content = content;
@@ -86,6 +86,6 @@ public class Post {
 
 	public Long getId() {
 		return id;
-	}	
+	}
 
 }
