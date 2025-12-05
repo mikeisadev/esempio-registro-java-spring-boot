@@ -58,7 +58,7 @@ public class RegistrationController {
         }
 
         if (bindingResult.hasErrors()) {
-            return "pages/register";
+            return "pages/registrati";
         }
 
         User user = new User();
